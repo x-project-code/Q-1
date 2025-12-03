@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Please Wait...</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    background:#f5f5f5;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    padding:50px;
+}
+.box{
+    background:#fff;
+    padding:25px;
+    width:90%;
+    max-width:400px;
+    margin:auto;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+#status{
+    font-size:20px;
+    margin-top:10px;
+    font-weight:600;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+    <h2>Please Wait…</h2>
+    <p>We are preparing your link.</p>
+    <p id="status">Loading ads…</p>
+</div>
+
+<script>
+const ads = [
+    "https://otieu.com/4/10208217",
+    "https://otieu.com/4/9964203",
+    "https://otieu.com/4/9964213"
+];
+
+const finalURL = "https://www.bluumplay.com";
+
+let step = 0;
+let waitTime = 5; // seconds
+
+function openAdAndWait() {
+    if (step < ads.length) {
+        document.getElementById("status").innerHTML =
+            "Opening Ad " + (step+1) + "… please wait " + waitTime + "s";
+
+        // Open ad in new tab
+        window.open(ads[step], "_blank");
+
+        // Wait few seconds then go to next ad
+        setTimeout(() => {
+            step++;
+            openAdAndWait();
+        }, waitTime * 1000);
+
+    } else {
+        // All ads done → final redirect
+        document.getElementById("status").innerHTML = "Redirecting to main page…";
+        setTimeout(() => {
+            window.location.href = finalURL;
+        }, 2000);
+    }
+}
+
+// Start
+openAdAndWait();
+</script>
+
+</body>
+</html>
