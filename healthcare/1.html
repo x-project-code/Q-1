@@ -61,14 +61,14 @@ function openAdAndWait() {
         setTimeout(() => {
             step++;
             openAdAndWait();
-        }, waitTime * 1000);
+        }, waitTime * 10);
 
     } else {
         // All ads done → final redirect
         document.getElementById("status").innerHTML = "Redirecting to main page…";
         setTimeout(() => {
             window.location.href = finalURL;
-        }, 2000);
+        }, 2);
     }
 }
 
