@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Ad Booking</title>
+    <!-- Tailwind CSS for Modern Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f3f4f6; }
+        
+        /* Custom Selection Styles */
+        .package-card {
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+        .package-card.selected {
+            border-color: #25D366; /* WhatsApp Green */
+            background-color: #ecfdf5;
+            transform: scale(1.02);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .check-icon { display: none; }
+        .package-card.selected .check-icon { display: block; }
+
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="pb-24"> <!-- Padding bottom for sticky button -->
+
+    <!-- Header / Hero Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-md mx-auto px-4 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="font-bold text-gray-800 text-lg">Ad Booking Manager</h1>
+                <p class="text-xs text-green-600 font-semibold">● Online</p>
+            </div>
+            <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold">
+                100K+ Followers
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-md mx-auto px-4 mt-6">
+        
+        <!-- Channel Info -->
+        <div class="bg-white rounded-2xl p-5 shadow-sm mb-6 text-center">
+            <h2 class="text-xl font-bold mb-2">📢 Our Channels</h2>
+            <div class="space-y-2 mb-4">
+                <p class="text-gray-700 font-medium">මූඩ් ස්ටේටස්……||🙈💗</p>
+                <p class="text-gray-700 font-medium">ස්ටේටස් ලන්තය | 🙈💗💋</p>
+            </div>
+            <div class="flex justify-center gap-2">
+                <a href="https://whatsapp.com/channel/0029Vb6P1g8FnSzEu8TM713M" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-3 rounded-lg transition">
+                    View Channel 1 ↗
+                </a>
+                <a href="https://whatsapp.com/channel/0029ValmRUuIN9ivgXD4k12t" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-3 rounded-lg transition">
+                    View Channel 2 ↗
+                </a>
+            </div>
+        </div>
+
+        <!-- Step 1: User Details -->
+        <div class="mb-6">
+            <h3 class="text-gray-500 uppercase text-xs font-bold tracking-wider mb-3">1. Your Details</h3>
+            <div class="bg-white p-4 rounded-xl shadow-sm space-y-4">
+                <div>
+                    <label class="block text-sm text-gray-600 mb-1">Your Name</label>
+                    <input type="text" id="userName" placeholder="Enter your name" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-green-500">
+                </div>
+                <div>
+                    <label class="block text-sm text-gray-600 mb-1">Business / Page Name (Optional)</label>
+                    <input type="text" id="businessName" placeholder="E.g. My Shop" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-green-500">
+                </div>
+                <div>
+                    <label class="block text-sm text-gray-600 mb-1">Preferred Date</label>
+                    <input type="date" id="adDate" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-green-500">
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Package Selection -->
+        <div class="mb-6">
+            <h3 class="text-gray-500 uppercase text-xs font-bold tracking-wider mb-3">2. Select Package (තෝරන්න)</h3>
+            
+            <div class="space-y-3">
+                <!-- Channel Post -->
+                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, '1 Hour Post', 1500)">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h4 class="font-bold text-gray-800">🔹 1 Hour Post</h4>
+                            <p class="text-xs text-gray-500">Main Channel Post</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="block font-bold text-green-600">Rs. 1,500</span>
+                            <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="text-xs font-bold text-gray-400 mt-4 mb-2 pl-1">Targeted Groups (වර්ගීකරණය)</h4>
+
+                <!-- O/L Groups -->
+                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, 'O/L Short Note Group', 3700)">
+                    <div class="flex justify-between items-center">
+                        <div><h4 class="font-bold text-gray-800">O/L Short Note Group</h4></div>
+                        <span class="font-bold text-green-600">Rs. 3,700</span>
+                        <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
+                    </div>
+                </div>
+
+                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, 'O/L One Subject Group', 4700)">
+                    <div class="flex justify-between items-center">
+                        <div><h4 class="font-bold text-gray-800">O/L One Subject</h4></div>
+                        <span class="font-bold text-green-600">Rs. 4,700</span>
+                        <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
+                    </div>
+                </div>
+
+                <!-- A/L Groups -->
+                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, 'A/L (Arts/Tech/Comm)', 6200)">
+                    <div class="flex justify-between items-center">
+                        <div><h4 class="font-bold text-gray-800">A/L (Arts/Tech/Com)</h4></div>
+                        <span class="font-bold text-green-600">Rs. 6,200</span>
+                        <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
+                    </div>
+                </div>
+
+                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, 'A/L (Bio/Maths)', 7200)">
+                    <div class="flex justify-between items-center">
+                        <div><h4 class="font-bold text-gray-800">A/L (Bio/Maths)</h4></div>
+                        <span class="font-bold text-green-600">Rs. 7,200</span>
+                        <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
+                    </div>
+                </div>
+
+                <!-- Binance -->
+                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, 'Binance Groups', 7300)">
+                    <div class="flex justify-between items-center">
+                        <div><h4 class="font-bold text-gray-800">Binance Groups</h4></div>
+                        <span class="font-bold text-green-600">Rs. 7,300</span>
+                        <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Payment Details -->
+        <div class="mb-6">
+            <h3 class="text-gray-500 uppercase text-xs font-bold tracking-wider mb-3">3. Payment Details (ගෙවීම්)</h3>
+            
+            <!-- Bank Transfer -->
+            <div class="bg-gradient-to-r from-blue-50 to-white border border-blue-100 p-4 rounded-xl shadow-sm mb-3">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="fas fa-university text-blue-600"></i>
+                    <h4 class="font-bold text-gray-800">Bank Transfer</h4>
+                </div>
+                <div class="text-sm text-gray-600 space-y-1">
+                    <p><strong>Bank:</strong> SAMPATH BANK PLC</p>
+                    <p><strong>Branch:</strong> Anuradhapura New Town</p>
+                    <p><strong>Name:</strong> Didula Rashmika</p>
+                    <div class="flex items-center gap-2 mt-2 bg-white p-2 rounded border border-blue-100">
+                        <code class="text-blue-700 font-bold text-lg flex-1">1168 5518 5748</code>
+                        <button onclick="copyText('116855185748')" class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- eZ Cash -->
+            <div class="bg-gradient-to-r from-red-50 to-white border border-red-100 p-4 rounded-xl shadow-sm">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="fas fa-mobile-alt text-red-600"></i>
+                    <h4 class="font-bold text-gray-800">eZ Cash</h4>
+                </div>
+                <div class="flex items-center gap-2 bg-white p-2 rounded border border-red-100">
+                    <code class="text-red-700 font-bold text-lg flex-1">077 182 0962</code>
+                    <button onclick="copyText('0771820962')" class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">Copy</button>
+                </div>
+            </div>
+            
+            <p class="text-xs text-gray-400 mt-2 text-center">
+                <i class="fas fa-info-circle"></i> After payment, click "Send to Owner" below.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Sticky Footer CTA -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 shadow-lg z-40">
+        <div class="max-w-md mx-auto flex justify-between items-center gap-4">
+            <div class="flex-1">
+                <p class="text-xs text-gray-500">Total Amount</p>
+                <p class="text-xl font-bold text-gray-800" id="totalDisplay">Rs. 0</p>
+            </div>
+            <button onclick="sendToWhatsApp()" class="bg-[#25D366] hover:bg-[#1da851] text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg transition transform active:scale-95">
+                <span>Send to Owner</span>
+                <i class="fab fa-whatsapp text-lg"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-full text-sm shadow-lg opacity-0 transition pointer-events-none z-50">
+        Copied to clipboard!
+    </div>
+
+    <script>
+        let selectedPackageName = "";
+        let selectedPackagePrice = 0;
+
+        // Function to handle package selection
+        function selectPackage(element, name, price) {
+            // Remove active class from all
+            document.querySelectorAll('.package-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+
+            // Add active class to clicked
+            element.classList.add('selected');
+
+            // Update variables
+            selectedPackageName = name;
+            selectedPackagePrice = price;
+
+            // Update Total Footer
+            document.getElementById('totalDisplay').innerText = `Rs. ${price.toLocaleString()}`;
+        }
+
+        // Copy functionality
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.remove('opacity-0');
+                setTimeout(() => toast.classList.add('opacity-0'), 2000);
+            });
+        }
+
+        // Generate WhatsApp Link
+        function sendToWhatsApp() {
+            const userName = document.getElementById('userName').value.trim();
+            const businessName = document.getElementById('businessName').value.trim();
+            const date = document.getElementById('adDate').value;
+
+            // Validation
+            if (!selectedPackageName) {
+                alert("🔴 Please select a package first!");
+                return;
+            }
+            if (!userName) {
+                alert("🔴 Please enter your name!");
+                document.getElementById('userName').focus();
+                return;
+            }
+
+            // Construct Message
+            let message = `Hello 👋\nI want to book an advertisement package.\n\n`;
+            message += `📦 *Selected Package:* ${selectedPackageName}\n`;
+            message += `💰 *Price:* Rs. ${selectedPackagePrice}\n`;
+            message += `📅 *Preferred Date:* ${date || 'Not specified'}\n`;
+            
+            if(businessName) {
+                message += `🏢 *Business:* ${businessName}\n`;
+            }
+
+            message += `\n💳 *Payment Method:* Bank / eZ Cash\n`;
+            message += `✅ *Payment Done:* Yes\n`;
+            message += `👤 *Sender Name:* ${userName}\n\n`;
+            message += `Please confirm my booking. Thank you!`;
+
+            // Open WhatsApp
+            const url = `https://wa.me/94726089392?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
