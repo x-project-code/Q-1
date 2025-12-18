@@ -3,281 +3,432 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp Ad Booking</title>
-    <!-- Tailwind CSS for Modern Styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <title>WhatsApp Channel Ads | 100K+ Followers</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #f3f4f6; }
-        
-        /* Custom Selection Styles */
-        .package-card {
-            transition: all 0.2s ease;
-            border: 2px solid transparent;
+        * { font-family: 'Inter', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #075E54 0%, #128C7E 50%, #25D366 100%);
         }
-        .package-card.selected {
-            border-color: #25D366; /* WhatsApp Green */
-            background-color: #ecfdf5;
-            transform: scale(1.02);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        .card-selected {
+            border-color: #25D366 !important;
+            background: linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%) !important;
+            box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.3);
         }
-        
-        .check-icon { display: none; }
-        .package-card.selected .check-icon { display: block; }
-
-        /* Smooth Scroll */
-        html { scroll-behavior: smooth; }
+        .pulse-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+        .package-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
-<body class="pb-24"> <!-- Padding bottom for sticky button -->
-
-    <!-- Header / Hero Section -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-md mx-auto px-4 py-4 flex justify-between items-center">
-            <div>
-                <h1 class="font-bold text-gray-800 text-lg">Ad Booking Manager</h1>
-                <p class="text-xs text-green-600 font-semibold">● Online</p>
+<body class="bg-gray-50 smooth-scroll">
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-8 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-20 h-20 bg-white rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-32 h-32 bg-white rounded-full"></div>
+            <div class="absolute top-1/2 left-1/2 w-16 h-16 bg-white rounded-full"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 pulse-badge">
+                <span class="text-2xl">🔥</span>
+                <span class="font-bold text-lg">100,000+ Active Followers</span>
+                <span class="text-2xl">🔥</span>
             </div>
-            <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold">
-                100K+ Followers
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-3">📢 WhatsApp Channel Ads</h1>
+            <p class="text-lg opacity-90 mb-4">Reach thousands of active Sri Lankan audience instantly!</p>
+            
+            <!-- Channel Names -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 mt-6">
+                <p class="text-sm opacity-80 mb-3">Our Channels:</p>
+                <div class="space-y-2">
+                    <a href="https://whatsapp.com/channel/0029Vb6P1g8FnSzEu8TM713M" target="_blank" class="block bg-white/20 rounded-lg px-4 py-2 hover:bg-white/30 transition">
+                        <span class="font-semibold">මූඩ් ස්ටේටස්……||🙈💗</span>
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029ValmRUuIN9ivgXD4k12t" target="_blank" class="block bg-white/20 rounded-lg px-4 py-2 hover:bg-white/30 transition">
+                        <span class="font-semibold">ස්ටේටස් ලන්තය | 🙈💗💋</span>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
-    <div class="max-w-md mx-auto px-4 mt-6">
-        
-        <!-- Channel Info -->
-        <div class="bg-white rounded-2xl p-5 shadow-sm mb-6 text-center">
-            <h2 class="text-xl font-bold mb-2">📢 Our Channels</h2>
-            <div class="space-y-2 mb-4">
-                <p class="text-gray-700 font-medium">මූඩ් ස්ටේටස්……||🙈💗</p>
-                <p class="text-gray-700 font-medium">ස්ටේටස් ලන්තය | 🙈💗💋</p>
+    <!-- Trust Indicators -->
+    <div class="bg-white shadow-sm py-4 px-4">
+        <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4 md:gap-8 text-center">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">✅</span>
+                <span class="text-sm font-medium text-gray-700">Trusted by 500+ Advertisers</span>
             </div>
-            <div class="flex justify-center gap-2">
-                <a href="https://whatsapp.com/channel/0029Vb6P1g8FnSzEu8TM713M" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-3 rounded-lg transition">
-                    View Channel 1 ↗
-                </a>
-                <a href="https://whatsapp.com/channel/0029ValmRUuIN9ivgXD4k12t" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-3 rounded-lg transition">
-                    View Channel 2 ↗
-                </a>
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">⚡</span>
+                <span class="text-sm font-medium text-gray-700">Fast Posting</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">💯</span>
+                <span class="text-sm font-medium text-gray-700">Real Engagement</span>
             </div>
         </div>
+    </div>
 
-        <!-- Step 1: User Details -->
-        <div class="mb-6">
-            <h3 class="text-gray-500 uppercase text-xs font-bold tracking-wider mb-3">1. Your Details</h3>
-            <div class="bg-white p-4 rounded-xl shadow-sm space-y-4">
-                <div>
-                    <label class="block text-sm text-gray-600 mb-1">Your Name</label>
-                    <input type="text" id="userName" placeholder="Enter your name" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-green-500">
-                </div>
-                <div>
-                    <label class="block text-sm text-gray-600 mb-1">Business / Page Name (Optional)</label>
-                    <input type="text" id="businessName" placeholder="E.g. My Shop" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-green-500">
-                </div>
-                <div>
-                    <label class="block text-sm text-gray-600 mb-1">Preferred Date</label>
-                    <input type="date" id="adDate" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-green-500">
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Package Selection Section -->
+        <section id="packages" class="mb-10">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">💼 Advertisement Packages</h2>
+                <p class="text-gray-600">Select a package that fits your needs</p>
+            </div>
+
+            <!-- Channel Post Package -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">🔹 Channel Post</span>
+                </h3>
+                <div class="grid gap-3">
+                    <label class="package-card cursor-pointer block bg-white rounded-xl border-2 border-gray-200 p-4 transition-all duration-300" data-package="1 Hour Post" data-price="1500">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="package" value="1 Hour Post|1500" class="w-5 h-5 text-green-500 accent-green-500">
+                                <div>
+                                    <p class="font-semibold text-gray-800">1 Hour Post</p>
+                                    <p class="text-sm text-gray-500">Channel එකේ පැය 1ක් Display</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xl font-bold text-green-600">Rs. 1,500</p>
+                            </div>
+                        </div>
+                    </label>
                 </div>
             </div>
-        </div>
 
-        <!-- Step 2: Package Selection -->
-        <div class="mb-6">
-            <h3 class="text-gray-500 uppercase text-xs font-bold tracking-wider mb-3">2. Select Package (තෝරන්න)</h3>
-            
-            <div class="space-y-3">
-                <!-- Channel Post -->
-                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, '1 Hour Post', 1500)">
-                    <div class="flex justify-between items-center">
+            <!-- Group Packages -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                    <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">🔴 Group Packages</span>
+                </h3>
+                <div class="grid gap-3">
+                    <label class="package-card cursor-pointer block bg-white rounded-xl border-2 border-gray-200 p-4 transition-all duration-300" data-package="O/L Short Note Group" data-price="3700">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="package" value="O/L Short Note Group|3700" class="w-5 h-5 text-green-500 accent-green-500">
+                                <div>
+                                    <p class="font-semibold text-gray-800">O/L Short Note Group</p>
+                                    <p class="text-sm text-gray-500">O/L Students සඳහා</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xl font-bold text-green-600">Rs. 3,700</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="package-card cursor-pointer block bg-white rounded-xl border-2 border-gray-200 p-4 transition-all duration-300" data-package="O/L One Subject Group" data-price="4700">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="package" value="O/L One Subject Group|4700" class="w-5 h-5 text-green-500 accent-green-500">
+                                <div>
+                                    <p class="font-semibold text-gray-800">O/L One Subject Group</p>
+                                    <p class="text-sm text-gray-500">විෂයක් අනුව Target කරන්න</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xl font-bold text-green-600">Rs. 4,700</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="package-card cursor-pointer block bg-white rounded-xl border-2 border-gray-200 p-4 transition-all duration-300" data-package="A/L (Arts / Technology / Commerce)" data-price="6200">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="package" value="A/L (Arts / Technology / Commerce)|6200" class="w-5 h-5 text-green-500 accent-green-500">
+                                <div>
+                                    <p class="font-semibold text-gray-800">A/L (Arts / Technology / Commerce)</p>
+                                    <p class="text-sm text-gray-500">A/L සිසුන් සඳහා</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xl font-bold text-green-600">Rs. 6,200</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="package-card cursor-pointer block bg-white rounded-xl border-2 border-gray-200 p-4 transition-all duration-300" data-package="A/L (Biology / Mathematics)" data-price="7200">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="package" value="A/L (Biology / Mathematics)|7200" class="w-5 h-5 text-green-500 accent-green-500">
+                                <div>
+                                    <p class="font-semibold text-gray-800">A/L (Biology / Mathematics)</p>
+                                    <p class="text-sm text-gray-500">Science Stream සිසුන්</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xl font-bold text-green-600">Rs. 7,200</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="package-card cursor-pointer block bg-white rounded-xl border-2 border-gray-200 p-4 transition-all duration-300" data-package="Binance Groups" data-price="7300">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="package" value="Binance Groups|7300" class="w-5 h-5 text-green-500 accent-green-500">
+                                <div>
+                                    <p class="font-semibold text-gray-800">Binance Groups</p>
+                                    <p class="text-sm text-gray-500">Crypto & Trading Community</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xl font-bold text-green-600">Rs. 7,300</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- User Details Form -->
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                    <span>📝</span> Your Details (Optional)
+                </h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                        <input type="text" id="userName" placeholder="Enter your name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Business / Page Name</label>
+                        <input type="text" id="businessName" placeholder="Your business or page name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Advertisement Date</label>
+                        <input type="date" id="prefDate" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Section -->
+        <section id="payment" class="mb-10">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">💳 Payment Methods</h2>
+                <p class="text-gray-600">Choose your preferred payment method</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <!-- Bank Payment -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-3xl">🏦</span>
                         <div>
-                            <h4 class="font-bold text-gray-800">🔹 1 Hour Post</h4>
-                            <p class="text-xs text-gray-500">Main Channel Post</p>
-                        </div>
-                        <div class="text-right">
-                            <span class="block font-bold text-green-600">Rs. 1,500</span>
-                            <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
+                            <h3 class="font-bold text-gray-800">Bank Transfer</h3>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">✅ Recommended</span>
                         </div>
                     </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between py-2 border-b border-gray-100">
+                            <span class="text-gray-600">Account Name:</span>
+                            <span class="font-semibold text-gray-800">Didula Rashmika</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-100">
+                            <span class="text-gray-600">Account Number:</span>
+                            <span class="font-semibold text-gray-800 font-mono">1168 5518 5748</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-100">
+                            <span class="text-gray-600">Bank:</span>
+                            <span class="font-semibold text-gray-800">SAMPATH BANK PLC</span>
+                        </div>
+                        <div class="flex justify-between py-2">
+                            <span class="text-gray-600">Branch:</span>
+                            <span class="font-semibold text-gray-800 text-right">Anuradhapura New Town</span>
+                        </div>
+                    </div>
+                    <button onclick="copyToClipboard('1168 5518 5748')" class="mt-4 w-full py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition flex items-center justify-center gap-2">
+                        <span>📋</span> Copy Account Number
+                    </button>
                 </div>
 
-                <h4 class="text-xs font-bold text-gray-400 mt-4 mb-2 pl-1">Targeted Groups (වර්ගීකරණය)</h4>
-
-                <!-- O/L Groups -->
-                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, 'O/L Short Note Group', 3700)">
-                    <div class="flex justify-between items-center">
-                        <div><h4 class="font-bold text-gray-800">O/L Short Note Group</h4></div>
-                        <span class="font-bold text-green-600">Rs. 3,700</span>
-                        <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
+                <!-- eZ Cash -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-3xl">📱</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800">eZ Cash</h3>
+                            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">✅ Quick & Easy</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, 'O/L One Subject Group', 4700)">
-                    <div class="flex justify-between items-center">
-                        <div><h4 class="font-bold text-gray-800">O/L One Subject</h4></div>
-                        <span class="font-bold text-green-600">Rs. 4,700</span>
-                        <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-6 text-white text-center">
+                        <p class="text-sm opacity-90 mb-2">Send Money To:</p>
+                        <p class="text-2xl font-bold font-mono">077 182 0962</p>
                     </div>
-                </div>
-
-                <!-- A/L Groups -->
-                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, 'A/L (Arts/Tech/Comm)', 6200)">
-                    <div class="flex justify-between items-center">
-                        <div><h4 class="font-bold text-gray-800">A/L (Arts/Tech/Com)</h4></div>
-                        <span class="font-bold text-green-600">Rs. 6,200</span>
-                        <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
-                    </div>
-                </div>
-
-                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, 'A/L (Bio/Maths)', 7200)">
-                    <div class="flex justify-between items-center">
-                        <div><h4 class="font-bold text-gray-800">A/L (Bio/Maths)</h4></div>
-                        <span class="font-bold text-green-600">Rs. 7,200</span>
-                        <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
-                    </div>
-                </div>
-
-                <!-- Binance -->
-                <div class="package-card bg-white p-4 rounded-xl shadow-sm cursor-pointer relative" onclick="selectPackage(this, 'Binance Groups', 7300)">
-                    <div class="flex justify-between items-center">
-                        <div><h4 class="font-bold text-gray-800">Binance Groups</h4></div>
-                        <span class="font-bold text-green-600">Rs. 7,300</span>
-                        <i class="fas fa-check-circle text-green-500 check-icon absolute top-4 right-4"></i>
-                    </div>
+                    <button onclick="copyToClipboard('0771820962')" class="mt-4 w-full py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition flex items-center justify-center gap-2">
+                        <span>📋</span> Copy Number
+                    </button>
                 </div>
             </div>
+
+            <!-- Payment Note -->
+            <div class="mt-6 bg-yellow-50 border border-yellow-200 rounded-xl p-4 flex items-start gap-3">
+                <span class="text-2xl">💡</span>
+                <div>
+                    <p class="font-semibold text-yellow-800">Important Note</p>
+                    <p class="text-sm text-yellow-700">After completing the payment, please send the payment confirmation screenshot via WhatsApp to confirm your booking.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="sticky bottom-0 bg-white/95 backdrop-blur-sm py-4 px-4 -mx-4 border-t border-gray-200 shadow-lg">
+            <div class="max-w-4xl mx-auto">
+                <!-- Selected Package Display -->
+                <div id="selectedDisplay" class="hidden mb-3 bg-green-50 border border-green-200 rounded-lg p-3 text-center">
+                    <p class="text-sm text-green-700">Selected: <span id="selectedPackageName" class="font-bold"></span> - <span id="selectedPackagePrice" class="font-bold"></span></p>
+                </div>
+                
+                <button onclick="sendToWhatsApp()" class="whatsapp-btn w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg transition-all duration-300 flex items-center justify-center gap-3">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    📩 Send to Owner (WhatsApp)
+                </button>
+                
+                <div class="flex gap-3 mt-3">
+                    <a href="#packages" class="flex-1 py-3 bg-gray-100 hover:bg-gray-200 rounded-xl font-semibold text-gray-700 text-center transition text-sm">
+                        ✅ Choose Package
+                    </a>
+                    <a href="#payment" class="flex-1 py-3 bg-gray-100 hover:bg-gray-200 rounded-xl font-semibold text-gray-700 text-center transition text-sm">
+                        💳 Payment Details
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4 mt-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-2xl mb-2">🙈💗</p>
+            <p class="font-semibold mb-1">මූඩ් ස්ටේටස් & ස්ටේටස් ලන්තය</p>
+            <p class="text-gray-400 text-sm mb-4">100,000+ Active Followers</p>
+            <div class="flex justify-center gap-4">
+                <a href="https://whatsapp.com/channel/0029Vb6P1g8FnSzEu8TM713M" target="_blank" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg text-sm transition">Follow Channel 1</a>
+                <a href="https://whatsapp.com/channel/0029ValmRUuIN9ivgXD4k12t" target="_blank" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg text-sm transition">Follow Channel 2</a>
+            </div>
+            <p class="text-gray-500 text-xs mt-6">© 2024 All Rights Reserved</p>
         </div>
+    </footer>
 
-        <!-- Step 3: Payment Details -->
-        <div class="mb-6">
-            <h3 class="text-gray-500 uppercase text-xs font-bold tracking-wider mb-3">3. Payment Details (ගෙවීම්)</h3>
-            
-            <!-- Bank Transfer -->
-            <div class="bg-gradient-to-r from-blue-50 to-white border border-blue-100 p-4 rounded-xl shadow-sm mb-3">
-                <div class="flex items-center gap-2 mb-2">
-                    <i class="fas fa-university text-blue-600"></i>
-                    <h4 class="font-bold text-gray-800">Bank Transfer</h4>
-                </div>
-                <div class="text-sm text-gray-600 space-y-1">
-                    <p><strong>Bank:</strong> SAMPATH BANK PLC</p>
-                    <p><strong>Branch:</strong> Anuradhapura New Town</p>
-                    <p><strong>Name:</strong> Didula Rashmika</p>
-                    <div class="flex items-center gap-2 mt-2 bg-white p-2 rounded border border-blue-100">
-                        <code class="text-blue-700 font-bold text-lg flex-1">1168 5518 5748</code>
-                        <button onclick="copyText('116855185748')" class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">Copy</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- eZ Cash -->
-            <div class="bg-gradient-to-r from-red-50 to-white border border-red-100 p-4 rounded-xl shadow-sm">
-                <div class="flex items-center gap-2 mb-2">
-                    <i class="fas fa-mobile-alt text-red-600"></i>
-                    <h4 class="font-bold text-gray-800">eZ Cash</h4>
-                </div>
-                <div class="flex items-center gap-2 bg-white p-2 rounded border border-red-100">
-                    <code class="text-red-700 font-bold text-lg flex-1">077 182 0962</code>
-                    <button onclick="copyText('0771820962')" class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">Copy</button>
-                </div>
-            </div>
-            
-            <p class="text-xs text-gray-400 mt-2 text-center">
-                <i class="fas fa-info-circle"></i> After payment, click "Send to Owner" below.
-            </p>
-        </div>
-
-    </div>
-
-    <!-- Sticky Footer CTA -->
-    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 shadow-lg z-40">
-        <div class="max-w-md mx-auto flex justify-between items-center gap-4">
-            <div class="flex-1">
-                <p class="text-xs text-gray-500">Total Amount</p>
-                <p class="text-xl font-bold text-gray-800" id="totalDisplay">Rs. 0</p>
-            </div>
-            <button onclick="sendToWhatsApp()" class="bg-[#25D366] hover:bg-[#1da851] text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg transition transform active:scale-95">
-                <span>Send to Owner</span>
-                <i class="fab fa-whatsapp text-lg"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- Notification Toast -->
-    <div id="toast" class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-full text-sm shadow-lg opacity-0 transition pointer-events-none z-50">
-        Copied to clipboard!
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-6 py-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+        <span id="toastMessage">Copied!</span>
     </div>
 
     <script>
-        let selectedPackageName = "";
-        let selectedPackagePrice = 0;
+        // Package selection handling
+        const packageCards = document.querySelectorAll('.package-card');
+        const selectedDisplay = document.getElementById('selectedDisplay');
+        const selectedPackageName = document.getElementById('selectedPackageName');
+        const selectedPackagePrice = document.getElementById('selectedPackagePrice');
 
-        // Function to handle package selection
-        function selectPackage(element, name, price) {
-            // Remove active class from all
-            document.querySelectorAll('.package-card').forEach(card => {
-                card.classList.remove('selected');
-            });
-
-            // Add active class to clicked
-            element.classList.add('selected');
-
-            // Update variables
-            selectedPackageName = name;
-            selectedPackagePrice = price;
-
-            // Update Total Footer
-            document.getElementById('totalDisplay').innerText = `Rs. ${price.toLocaleString()}`;
-        }
-
-        // Copy functionality
-        function copyText(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                const toast = document.getElementById('toast');
-                toast.classList.remove('opacity-0');
-                setTimeout(() => toast.classList.add('opacity-0'), 2000);
-            });
-        }
-
-        // Generate WhatsApp Link
-        function sendToWhatsApp() {
-            const userName = document.getElementById('userName').value.trim();
-            const businessName = document.getElementById('businessName').value.trim();
-            const date = document.getElementById('adDate').value;
-
-            // Validation
-            if (!selectedPackageName) {
-                alert("🔴 Please select a package first!");
-                return;
-            }
-            if (!userName) {
-                alert("🔴 Please enter your name!");
-                document.getElementById('userName').focus();
-                return;
-            }
-
-            // Construct Message
-            let message = `Hello 👋\nI want to book an advertisement package.\n\n`;
-            message += `📦 *Selected Package:* ${selectedPackageName}\n`;
-            message += `💰 *Price:* Rs. ${selectedPackagePrice}\n`;
-            message += `📅 *Preferred Date:* ${date || 'Not specified'}\n`;
+        packageCards.forEach(card => {
+            const radio = card.querySelector('input[type="radio"]');
             
-            if(businessName) {
-                message += `🏢 *Business:* ${businessName}\n`;
-            }
+            card.addEventListener('click', () => {
+                // Remove selection from all cards
+                packageCards.forEach(c => c.classList.remove('card-selected'));
+                
+                // Add selection to clicked card
+                card.classList.add('card-selected');
+                radio.checked = true;
+                
+                // Update display
+                const [name, price] = radio.value.split('|');
+                selectedPackageName.textContent = name;
+                selectedPackagePrice.textContent = `Rs. ${parseInt(price).toLocaleString()}`;
+                selectedDisplay.classList.remove('hidden');
+            });
+        });
 
-            message += `\n💳 *Payment Method:* Bank / eZ Cash\n`;
-            message += `✅ *Payment Done:* Yes\n`;
-            message += `👤 *Sender Name:* ${userName}\n\n`;
-            message += `Please confirm my booking. Thank you!`;
-
-            // Open WhatsApp
-            const url = `https://wa.me/94726089392?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
+        // Copy to clipboard function
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Copied to clipboard! ✅');
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showToast('Copied to clipboard! ✅');
+            });
         }
+
+        // Toast notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            toastMessage.textContent = message;
+            toast.classList.remove('opacity-0');
+            toast.classList.add('opacity-100');
+            
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+            }, 2000);
+        }
+
+        // Send to WhatsApp function
+        function sendToWhatsApp() {
+            const selectedPackage = document.querySelector('input[name="package"]:checked');
+            const userName = document.getElementById('userName').value || 'Not provided';
+            const businessName = document.getElementById('businessName').value || 'Not provided';
+            const prefDate = document.getElementById('prefDate').value || 'Not specified';
+            
+            if (!selectedPackage) {
+                showToast('⚠️ Please select a package first!');
+                document.getElementById('packages').scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+            
+            const [packageName, price] = selectedPackage.value.split('|');
+            
+            const message = `Hello 👋
+I want to book an advertisement package.
+
+*Selected Package:* ${packageName}
+*Price:* Rs. ${parseInt(price).toLocaleString()}
+*Preferred Date:* ${prefDate}
+
+*Business/Page Name:* ${businessName}
+*Sender Name:* ${userName}
+
+*Payment Method:* Bank / eZ Cash
+*Payment Done:* Yes
+
+Please confirm my booking. Thank you! 🙏`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/94726089392?text=${encodedMessage}`;
+            
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Set minimum date to today
+        document.getElementById('prefDate').min = new Date().toISOString().split('T')[0];
     </script>
 </body>
 </html>
