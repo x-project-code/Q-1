@@ -1,0 +1,2 @@
+/public/storage/uploads/*
+!/public/storage/uploads/.gitkeep
